@@ -1,13 +1,22 @@
 for LTI SISO systems: $\frac{d}{dt} \text{storage} = \sum \text{inflows} - \sum \text{outflows}$
 
-{\centering \textbf{\underline{Mass conservation}}}
-    $\frac{d}{dt} = \sum m_{in}(t) - \sum m_{out}(t)$
-
-{\centering\textbf{\underline{Mechanical systems}}}
-    $M(t) = J \cdot \ddot{\phi(t)}$
-
-{\centering\textbf{\underline{Thermodynamic systems}}}
+    \begin{center}
+        \textbf{\underline{Mass conservation}}    
+    \end{center}
     \begin{align*}
-        C_i \cdot T_i = (Q_j - Q_k)\\
-        \dot{Q}_a = c_a(T_i - T_j)
+        \frac{d}{dt} m = \sum m_{in}(t) - \sum m_{out}(t)
+    \end{align*}
+
+    \begin{center}
+        \textbf{\underline{Mechanical systems}}    
+    \end{center}
+    \begin{align*}
+        M(t) = J \cdot \ddot{\phi}(t)
+    \end{align*}
+
+    \begin{center}
+        \textbf{\underline{Thermodynamic systems}}    
+    \end{center}
+    \begin{align*}
+        m \frac{d}{dt} T(t) = c(T_{ext}(t) -T(t)) + u(t)
     \end{align*}

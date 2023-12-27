@@ -1,2 +1,10 @@
 \subsection{Interconnections}
-    \includegraphics[width = \linewidth]{src/images/interconnection.png}
+        \begin{tabu}{X[m] X[3, c, m] X[2, m]}
+            \textbf{Name}               & \textbf{Block chart}                                                                      & \textbf{Formula}\\
+            \hline \hline
+            Serial Interconnection      & \includegraphics[width = \linewidth]{src/images/interconnection_serial.png}               & $\sum = \sum_2 \sum_1$\\
+            \hline
+            Parallel Interconnection    & \includegraphics[width = \linewidth]{src/images/interconnection_parallel.png}             & $\sum = \sum_1 + \sum_2$\\
+            \hline
+            Feedback Interconnection    & \includegraphics[width = \linewidth]{src/images/interconnection_negative_feedback.png}    & $\sum = (I + \sum_2 \sum_1)^{-1} \sum_1$
+        \end{tabu}
