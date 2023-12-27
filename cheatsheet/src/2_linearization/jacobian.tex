@@ -1,0 +1,40 @@
+\subsection*{Jacobian Linearization Process}
+    Use in LTI-Systems, see equation \ref*{eqn:LTI}
+    \begin{align*}
+        \left(
+            \begin{array}{c}
+                x\\
+                u
+            \end{array}
+        \right)
+        =
+        \left(
+            \begin{array}{c}
+                x_e\\
+                u_e
+            \end{array}
+        \right)
+    \end{align*}
+    \begin{align*} % \Big\rvert_{x = x_e, u = u_e} Auswertung der Differentiale
+        A &= 
+        \left[\begin{array}{c c c}
+            \frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n}\\
+            \vdots & \ddots & \vdots\\
+            \frac{\partial f_n}{\partial x_1} & \cdots & \frac{\partial f_n}{\partial x_n}
+        \end{array}\right]
+        &B &= 
+        \left[\begin{array}{c}
+            \frac{\partial f_1}{\partial u}\\
+            \vdots\\
+            \frac{\partial f_n}{\partial u}
+        \end{array}\right]
+        \\
+        C &= 
+        \left[\begin{array}{c c c}
+            \frac{\partial g}{\partial x_1} & \cdots & \frac{\partial g}{\partial x_n}
+        \end{array}\right]
+        &D &= 
+        \left[\begin{array}{c}
+            \frac{\partial g}{\partial u}
+        \end{array}\right]
+    \end{align*}

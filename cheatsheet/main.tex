@@ -4,16 +4,57 @@
 \usepackage{empheq}
 \usepackage{pbox}
 \usepackage{booktabs}
+\usepackage{verbatim}
 
 \doctitle{... Cheatsheet}
 \author{AUTHOR \\ \vspace*{-0.2em}}
 
 \begin{document}
 \section{1. Terminology}
-	\input{src/1_section/1_subsection.tex}
-	\input{src/1_section/2_basic_formula.tex}
-	\input{src/1_section/3_interconnections.tex}
-	\input{src/1_section/4_basic_architecture.tex}
-	\input{src/1_section/5_mechanic.tex}
-	\input{src/1_section/6_thermodynamic.tex}
+	\input{src/1_terminology/1_input_output_state.tex}
+	\input{src/1_terminology/2_state_space_form.tex}
+	\input{src/1_terminology/3_systems.tex}
+	\input{src/1_terminology/4_classification.tex}
+	\input{src/1_terminology/3_interconnections.tex}
+	\input{src/1_terminology/4_basic_architecture.tex}
+	\input{src/1_terminology/5_mechanic.tex}
+	\input{src/1_terminology/6_thermodynamic.tex}
+
+\section{2. System Modeling}
+	\input{src/2_modeling/1_modeling.tex}
+	
+
+\section{2. linearization process}
+	\input{src/2_linearization/jacobian.tex}
 \end{document}
+
+\begin{comment}
+	TERMINOLOGY
+	Definitions from ZF
+Input, output, state…
+	Classification of Systems (Also see ZF)
+SYSTEM MODELING / transfer real world problems to input output system
+	Thermodynamics
+	Conservation of mass: for LTI SISO systems: $\frac{d}{dt} \text{storage} = \sum \text{inflows} - \sum \text{outflows}$
+
+	Mechanics
+NETWORK ANALYSIS
+	(Interconnections & Basic Control Architectures) (Block Diagrams on ZF)
+LINEARIZATION
+	Jacobian Linearization process
+LINEAR SYSTEM ANALYSIS
+TIME RESPONSE
+STABILITY
+	Equilibrium point: $\dot{x}(t) = 0
+FREQUENCY DOMAIN
+	y(t) = G(s) * u(t) for u(t) = e^(st)
+	Therefore, for sinusoidal inputs: u(t) = cos(omega * t) -> y = M cos(omega * t + phi), M = |G(j * omega)|, phi = \angle G(j * omega
+	e^(i*s*t) = cos(s*t) + i*sin(s*t), cos(s*t) = 
+	STATE SPACE -> TRANSFER FUNCTION
+	TRANSFER FUNCTION -> CONTROLLABLE CANONICAL FORM
+	POLES/ZEROS
+SIMPLE LAPLACE
+	derivative of a laplace function
+	laplace of step function
+	laplace of x^n
+\end{comment}

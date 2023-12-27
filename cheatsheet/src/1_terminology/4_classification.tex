@@ -1,0 +1,54 @@
+\subsection*{Classification}
+    \subsubsection*{LTI-Systems}
+        Linear vs Nonlinear:
+        System can be represented in state-space-form:
+        \begin{equation}\label{eqn:LTI}
+            \begin{cases}
+                \dot{x}(t) = Ax(t) + Bu(t)\\
+                y(t) = Cx(t) + Du(t)
+            \end{cases}
+        \end{equation}
+        -> linear system -> superposition can be used\\
+        $y(t) = f(au_1(t)+bu_2(t)) = af(u_1(t)) + bf(u_2(t))$
+    
+    \subsubsection*{Causal systems}
+        Causal vs Non-Causal:
+        Output at time $t$ depends only on inputs that happened before and not after $t$ (future inputs do not affect current output)\\
+        $y(t) = f(u(\tau)), \tau < t$
+    
+    \subsubsection*{Static systems}
+        Static (memoryless) vs Dynamic
+        y(t) only depends on u(t), output does not depend on past or future\\
+        $dim(x) = 0$ : dimension of system equals 0
+
+    \subsubsection*{Time invariant vs Time-varying}
+        output does not depend on time, only on $\Delta t$ (counter example sun clock)\\
+        {\centering\textbf{\underline{Time-varying}}}
+        \begin{equation}
+            t_0 = t_0
+            \begin{cases}
+                \dot{x}(t) = f(t, x(t), u(t))\\
+                y(t) = g(t, x(t), u(t))
+            \end{cases}
+            \rightarrow
+            \begin{cases}
+                \dot{x}(t) = A(t)x(t) + B(t)u(t)\\
+                y(t) = C(t)x(t) + D(t)u(t)
+            \end{cases}
+        \end{equation}
+
+        {\centering\textbf{\underline{Time Invariant}}}
+        \begin{align*}
+            \sigma_{\tau} y(t) = \sum \sigma_{\tau} u(t)\\
+            y(t - \tau) = \sum(u(t - \tau))\\
+            t_0 = 0
+            \begin{cases}
+                \dot{x}(t) = f(x(t), u(t))\\
+                y(t) = g(x(t), u(t))
+            \end{cases}
+            \rightarrow
+            \begin{cases}
+                \dot{x}(t) = Ax(t) + Bu(t)\\
+                y(t) = Cx(t) + Du(t)
+            \end{cases}
+        \end{align*}
