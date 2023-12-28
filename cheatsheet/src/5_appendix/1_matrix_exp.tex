@@ -1,0 +1,34 @@
+\subsection{compute matrix exponential}
+    \subsubsection{Taylor expansion}
+        \begin{align*}
+            e^{At} = I + At + \frac{1}{2}(At)^2 + ... + \frac{1}{n!}(At)^n + ...
+        \end{align*}
+    \subsubsection{Diagonalization}
+        \begin{align*}
+            A &= TDT^{-1}\\
+            \Rightarrow exp(At) &= T e^{Dt} T^{-1}\\
+            &= V \text{diag}(e^{\lambda_1 t}, e^{\lambda_2 t}, ..., e^{\lambda_n t}) V^{-1}\\
+            V &= (EV_1, EV_2, ..., EV_n)
+        \end{align*}
+    \subsubsection{Jordan matrix}
+        \begin{align*}
+            exp\left(
+                \left[
+                    \begin{array}{c c c}
+                        \lambda & 1 & 0\\
+                        0 & \lambda & 1\\
+                        0 & 0 & \lambda
+                    \end{array}
+                \right]
+                t
+            \right)
+            =
+            \left[
+                \begin{array}{c c c}
+                    1 & t & \frac{1}{2!} t^2\\
+                    0 & 1 & t\\
+                    0 & 0 & 1
+                \end{array}
+            \right]
+            e^{\lambda t}
+        \end{align*}

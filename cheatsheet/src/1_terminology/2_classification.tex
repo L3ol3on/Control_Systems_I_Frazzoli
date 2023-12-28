@@ -1,20 +1,21 @@
 \subsection{Classification}
-    LTI SISO: Linear Time invariant single input single output
+    \textcolor{blue}{L}\textcolor{orange}{TI} \textcolor{teal}{SISO}: \textcolor{blue}{Linear} \textcolor{orange}{Time invariant} \textcolor{teal}{single input single output}
     \subsubsection*{Linear vs. nonlinear Systems}
-        Linear system: $y(t) \sim u(t)$\\
-        Linear System can be represented in state-space-form:
+        For a linear system, Additivity and Homogenity must hold:
+        \begin{align*}
+            \Sigma (\alpha u_a + \beta u_b) = \alpha (\Sigma u_a) + \beta (\Sigma u_b) = \alpha y_a + \beta y_b
+        \end{align*}
+        Therefore, superposition holds for linear systems.\\
+        Linear System can be represented in state-space-form, the matrices do not depend on time:
         \begin{equation}\label{eqn:LTI}
             \begin{cases}
                 \dot{x}(t) = Ax(t) + Bu(t)\\
                 y(t) = Cx(t) + Du(t)
             \end{cases}
         \end{equation}
-        -> linear system -> superposition can be used\\
-        $y(t) = f(au_1(t)+bu_2(t)) = af(u_1(t)) + bf(u_2(t))$
-    
-    \subsubsection*{Causal systems}
-        Causal vs Non-Causal:
-        Output at time $t$ depends only on inputs that happened before and not after $t$ (future inputs do not affect current output)\\
+
+    \subsubsection*{Causal vs non-causal systems}
+        Output at time $t$ depends only on the values of input on $(-\infty, t]$ (future inputs do not affect current output)\\
         $y(t) = f(u(\tau)), \tau < t$
     
     \subsubsection*{Static systems}
@@ -40,8 +41,8 @@
 
         {\centering\textbf{\underline{Time Invariant}}}
         \begin{align*}
-            \sigma_{\tau} y(t) = \sum \sigma_{\tau} u(t)\\
-            y(t - \tau) = \sum(u(t - \tau))\\
+            \text{time shift operator $\sigma_{\tau}$:\quad \quad} \sigma_{\tau} y(t) = \Sigma \sigma_{\tau} u(t)\\
+            y(t - \tau) = \Sigma(u(t - \tau))\\
             t_0 = 0
             \begin{cases}
                 \dot{x}(t) = f(x(t), u(t))\\

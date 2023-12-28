@@ -1,10 +1,26 @@
 \subsection{State Space Form}
-    \begin{align*}
-        \begin{cases}
-            \dot{x}(t) = f(x(t), u(t), d(t))\\
-            y(t) = f(x(t), u(t), d(t))
-        \end{cases}\\
-        \text{dim}(x) = \text{Order / Dimension of system}\\ 
-        \text{(minimum \# variables sufficient to describe state)}
-    \end{align*}
+    \begin{minipage}{0.49 \linewidth}
+        \begin{center}
+            \textbf{\underline{General form}}
+        \end{center}
+        \begin{align*}
+            \begin{cases}
+                \dot{x}(t) = f(x(t), u(t), d(t))\\
+                y(t) = f(x(t), u(t), d(t))
+            \end{cases}\\
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}{0.49 \linewidth}
+        \begin{center}
+            \textbf{\underline{Linear System}}
+        \end{center}
+        \begin{align*}
+            \begin{cases}
+                \dot{x}(t) = Ax(t) + Bu(t)\\
+                y(t) = Cx(t) + Du(t)
+            \end{cases}\\
+        \end{align*}
+    \end{minipage}
+    dim$(x) = $Order / Dimension of system\\ 
+    (minimum $\#$ variables sufficient to describe state)
     
