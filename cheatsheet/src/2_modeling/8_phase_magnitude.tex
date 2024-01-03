@@ -1,0 +1,7 @@
+\subsection{Compute phase and magnitude of transfer function}
+\begin{align*}
+    u(t) &= sin(\omega t) \rightarrow y_{ss}(t) = \left|G(j \omega)\right| \sin\left(\omega t + \angle(G(j \omega))\right)\\
+    G(s) &= k \frac{(s-z_1)(s-z_2)}{(s-p_1)(s-p_2)}\\
+    |G(s)| &= k \frac{|s-z_1| \cdot |s-z_2|}{|s-p_1| \cdot |s-p_2|}\\
+    \angle(G(s)) &= \angle(s-z_1) + \angle(s-z_2) - \angle(s-p_1) - \angle(s-p_2)
+\end{align*}

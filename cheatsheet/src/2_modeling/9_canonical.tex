@@ -1,0 +1,46 @@
+\subsection{controllable canonical form (frequency $\rightarrow$ time)}
+\titel{$A$ is diagonal:}
+\begin{align*}
+    G(s) = \frac{p_1}{s-\lambda_1} + \frac{p_2}{s-\lambda_2} + ... + \frac{p_n}{s-\lambda_n} + d\\
+    A = \left[\begin{array}{c c c}
+        \lambda_1 & & \\
+         & \ddots & \\
+         & & \lambda_n
+    \end{array}\right]
+    ,
+    B = \left[\begin{array}{c}
+        \sqrt{p_1}\\
+        \vdots\\
+        \sqrt{p_n}
+    \end{array}\right]
+    \\
+    C = \left[\begin{array}{c c c}
+        \sqrt{p_1} & \cdots & \sqrt{p_n}
+    \end{array}\right]
+    ,
+    D = d
+\end{align*}
+
+\titel{general case:}
+\begin{align*}
+    G(s) &= \frac{p_1}{s-\lambda_1} + \frac{p_2}{s-\lambda_2} + ... + \frac{p_n}{s-\lambda_n} + d\\
+    A &= \left[\begin{array}{c c c c c}
+        0 & 1 & 0 & \cdots & 0\\
+        0 & 0 & 1 & \cdots & 0\\
+        \vdots & \vdots & & \ddots & 1\\
+        -a_0 & -a_1 & \cdots & & a_{n-1}
+    \end{array}\right]
+    ,
+    B = \left[\begin{array}{c}
+        0\\
+        0\\
+        \vdots\\
+        1
+    \end{array}\right]
+    \\
+    C &= \left[\begin{array}{c c c c}
+        b_0 & b_1 & \cdots & b_{n-1}
+    \end{array}\right]
+    ,
+    D = d
+\end{align*}

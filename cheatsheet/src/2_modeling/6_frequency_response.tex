@@ -1,0 +1,36 @@
+\subsection{Frequency response / domain (time $\rightarrow$ frequency)}
+choose $u(t) = e^{st}$ where s is a complex number\\
+$ y(t) = \underbrace{Ce^{At} [x(0) - (sI - A)^{-1} B]}_{\text{Transient response (= 0 if as. stable)}}
++ \underbrace{[C(sI - A)^{-1} B + D]e^{st}}_{\text{steady-state response}}$\\
+\includegraphics*[width = \linewidth]{src/images/transient_steady_state.png}
+$\Rightarrow y_{ss} = G(s) e^{st}\\
+G(s) = \frac{Y(s)}{U(s)} = C(sI - A)^{-1} B + D = \frac{C \cdot \text{Adj}(sI - A) \cdot B}{\text{det}(sI - A)} + D$\\
+\begin{align*}
+    \text{adj}\left[
+        \begin{array}{c c}
+            a & b\\
+            c & d            
+        \end{array}
+    \right]
+    = \left[
+        \begin{array}{c c}
+            d & -b\\
+            -c & a
+        \end{array}
+    \right]
+    \\
+    \text{adj}\left[
+        \begin{array}{c c c}
+            a & b & c\\
+            d & e & f\\
+            g & h & i
+        \end{array}
+    \right]
+    = \left[
+        \begin{array}{c c c}
+            ei-fh & ch-bi & bf-ce\\
+            fg-di & ai-cg & cd-af\\
+            dh-eg & bg-ah & ae-bd            
+        \end{array}
+    \right]
+\end{align*}

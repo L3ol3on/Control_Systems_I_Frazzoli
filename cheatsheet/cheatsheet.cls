@@ -206,6 +206,12 @@
     \end{center}%
 }
 
+\newcommand{\titel}[1]{%
+    \begin{center}%
+        \textbf{\underline{#1}}%
+    \end{center}%
+}
+
 \renewcommand{\normalsize}{\fontsize{8}{9}\selectfont} % changes normalsize to small % dirty
 \renewcommand{\familydefault}{\sfdefault}
 
