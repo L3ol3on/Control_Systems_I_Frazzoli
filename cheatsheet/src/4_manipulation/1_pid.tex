@@ -1,0 +1,30 @@
+\subsection{PID Controller}
+    \titel{Differentiator}
+        \begin{align*}
+            y(t) = \frac{d u(t)}{dt} = \frac{d}{dt} e^{st} = s \cdot e^{st} = s \cdot u(t)
+        \end{align*}
+    \titel{Integrator}
+        \begin{align*}
+            y(t) = \int u(t) dt = \int e^{st} dt = \frac{1}{s} \cdot e^{st} = \frac{1}{s} \cdot u(t)
+        \end{align*}
+
+    \titel{Building the controller}
+        \begin{minipage}{0.49\linewidth}
+            \begin{align*}
+                C(s) &= k_P + \frac{k_I}{s} + k_D \cdot s\\
+                &= \frac{k_P \cdot s + k_I + k_D \cdot s^2}{s}\\
+                &= k_P(1 + \frac{1}{T_I \cdot s} + T_D \cdot s)
+            \end{align*}
+        \end{minipage}
+        \begin{minipage}{0.49\linewidth}
+            \begin{scriptsize}
+                \begin{align*}
+                    k_P &= \text{Proportional gain}\\
+                    k_I &= \text{Integral gain}\\
+                    k_D &= \text{Derivative gain}\\
+                    T_I &= \text{Integral time constant gain}\\
+                    T_D &= \text{Derivative time constant}
+                \end{align*}
+            \end{scriptsize}
+        \end{minipage}
+        %Von ZF: P-controller, I-controller, D-controller
