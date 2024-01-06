@@ -1,0 +1,53 @@
+\subsection{System response}
+    \includegraphics[width = \linewidth]{src/images/basic_block_chart.png}
+    \begin{minipage}{0.49\linewidth}
+        \titel{Sensitivity}
+        \begin{center}
+            $S(s) = \frac{1}{1 + L(s)}$
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.49\linewidth}
+        \titel{Complimentary Sensitivity}
+        \begin{center}
+            $S(s) = \frac{L(s)}{1 + L(s)}$
+        \end{center}
+    \end{minipage}
+    
+    \subsubsection{steady state error, disturbance and noise}
+    find steady state using final value theorem $\lim\limits_{t \rightarrow \infty} a(t) = \lim\limits_{s \rightarrow 0} A(s)$
+    \begin{minipage}{0.32\linewidth}
+        \begin{align*}
+            e(t) = S(s) r(t)\\
+            e(t) = - S(s) d_2(t)
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}{0.32\linewidth}
+        \begin{align*}
+            e(t) = - S(s) n(t)\\
+            e(t) = - T(s) d_1(t)
+        \end{align*}
+    \end{minipage}
+    \begin{minipage}{0.32\linewidth}
+        \begin{align*}
+            y(t) = T(s) r(t)
+        \end{align*}
+    \end{minipage}
+
+    \subsubsection{Steady State error to Ramp reference Inputs}
+        Ramp is obtained by integrating step q-times:
+        \begin{align*}
+            r(t) = \frac{1}{s^q}\\
+            \rightarrow e_{ss} = \lim\limits_{s \rightarrow 0} \left( \frac{1}{1 + L(s)} \cdot \frac{1}{s^q} \right)\\
+            L(0) = \frac{k_{\text{Bode}}}{s^q}
+        \end{align*}
+        knowing Type (number of poles at origin of $L(s)$) and order $q$ of ramp:\\
+        \begin{tabu}[width = \linewidth]{| X | X | X | X |}
+            \hline
+            $e_{ss}$    & $q = 0$                           & $q = 1$                       & $q = 2$\\
+            \hline \hline
+            Type 0      & $\frac{1}{1 + k_{\text{Bode}}}$   & $\infty$                      & $\infty$\\
+            \hline
+            Type 1      & $0$                               & $\frac{1}{k_{\text{Bode}}}$   & $\infty$\\
+            \hline
+            Type 2      & $0$                               & $0$                           & $\frac{1}{k_{\text{Bode}}}$
+        \end{tabu}

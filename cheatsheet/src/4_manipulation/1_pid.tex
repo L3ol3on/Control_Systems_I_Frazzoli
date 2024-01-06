@@ -1,14 +1,58 @@
 \subsection{PID Controller}
-    \titel{Differentiator}
-        \begin{align*}
-            y(t) = \frac{d u(t)}{dt} = \frac{d}{dt} e^{st} = s \cdot e^{st} = s \cdot u(t)
-        \end{align*}
-    \titel{Integrator}
-        \begin{align*}
-            y(t) = \int u(t) dt = \int e^{st} dt = \frac{1}{s} \cdot e^{st} = \frac{1}{s} \cdot u(t)
-        \end{align*}
+    \subsubsection{P-Controller}
+        \titel{Gain}
+            \begin{align*}
+                y(t) = u(t)
+            \end{align*}
+        \begin{itemize}
+            \item proportional to error
+            \item higher proportional gain moves crossover frequency up
+            \item $k_P$ increases:
+            \begin{itemize}
+                \item closed-loop system of 2nd and higher order become more oscillatory
+                \item closed-loop system remains stable
+                \item $e_{ss}$ decreases
+                \item faster response
+                \item increased sensitivity to noise
+            \end{itemize}
+        \end{itemize}
 
-    \titel{Building the controller}
+    \subsubsection{I-Controller (integral)}
+        \titel{Integrator}
+            \begin{align*}
+                y(t) = \int u(t) dt = \int e^{st} dt = \frac{1}{s} \cdot e^{st} = \frac{1}{s} \cdot u(t)
+            \end{align*}
+        \begin{itemize}
+            \item proportional to accumulated error
+            \item new zero introduced
+            \item number of asymptotes is reduced
+            \item steady state error to step input\textbf{exactly zero}
+            \item $k_I$ increases:
+            \begin{itemize}
+                \item more oscillatory response
+                \item noise sensitivity does not change
+            \end{itemize}
+        \end{itemize}
+
+    \subsubsection{D-Controller (derivative)}
+        \titel{Differentiator}
+            \begin{align*}
+                y(t) = \frac{d u(t)}{dt} = \frac{d}{dt} e^{st} = s \cdot e^{st} = s \cdot u(t)
+            \end{align*}
+        \begin{itemize}
+            \item proportional to rate of change of error (reduced overshoot)
+            \item pole introduced at $p=0$
+            \item zero introduced at $z = -\frac{k_i}{k_p}$
+            \item number of asymptotes unchanged
+            \item $k_P$ increases:
+            \begin{itemize}
+                \item $e_{ss}$ unaffected
+                \item less oscillatory, but potentially slower
+                \item increased sensitivity to noise
+            \end{itemize}
+        \end{itemize}
+
+    \subsubsection{Building the controller}
         \begin{minipage}{0.49\linewidth}
             \begin{align*}
                 C(s) &= k_P + \frac{k_I}{s} + k_D \cdot s\\
