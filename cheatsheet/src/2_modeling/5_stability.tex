@@ -1,15 +1,20 @@
 \subsection{Stability}
-    \includegraphics[width = \linewidth]{src/images/eigenvalue_response.png}
-    system behaviour based on eigenvalues of A
+    \begin{minipage}{0.39\linewidth}
+        \titel{system behaviour}
+        \includegraphics[width = \linewidth]{src/images/eigenvalue_response.png}
+        $\lambda =$ eigenvalues of A
+    \end{minipage}
+    \begin{minipage}{0.59\linewidth}
+        \titel{Lyapunov stable}
+        $\lim_{t \rightarrow \infty} x(t) \neq \pm \infty \Leftrightarrow Re(\lambda_i) \leq 0\\
+        \text{exactly one } Re(\lambda_i) = 0$
+%
+        \titel{Asymptotically stable}
+        $\lim_{t \rightarrow \infty} x(t) = 0 \Leftrightarrow Re(\lambda_i) < 0$
 
-    \subsubsection{Lyapunov stable}
-    $\lim_{t \rightarrow \infty} x(t) \neq \pm \infty \Leftrightarrow Re(\lambda_i) \leq 0 \text{, exactly one } Re(\lambda_i) = 0$
-
-    \subsubsection{Asymptotically stable}
-    $\lim_{t \rightarrow \infty} x(t) = 0 \Leftrightarrow Re(\lambda_i) < 0$
-
-    \subsubsection{BIBO (Bounded Input Bounded Output) stability}
-    $\lim_{t \rightarrow \infty} y(t) \neq \pm \infty \Leftrightarrow Re(\lambda_i) < 0$
+        \titel{BIBO (Bounded Input Bounded Output)}
+        $\lim_{t \rightarrow \infty} y(t) \neq \pm \infty \Leftrightarrow Re(\lambda_i) < 0$
+    \end{minipage}
 
     \begin{center}
         \textbf{Not stabilizable and observable systems}

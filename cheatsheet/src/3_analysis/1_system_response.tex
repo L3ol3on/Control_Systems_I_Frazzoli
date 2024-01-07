@@ -36,10 +36,9 @@
     Disturbance rejection: small $T(s)$ or $S(s)$ desired at low frequencies
 
     \subsubsection{Steady State error to Ramp reference Inputs}
-        Ramp is obtained by integrating step q-times:
+        Ramp is obtained by integrating step q-times: $r(t) = \frac{1}{s^q}$
         \begin{align*}
-            r(t) = \frac{1}{s^q}\\
-            \rightarrow e_{ss} = \lim\limits_{s \rightarrow 0} \left( \frac{1}{1 + L(s)} \cdot \frac{1}{s^q} \right)\\
+            \rightarrow e_{ss} = \lim\limits_{s \rightarrow 0} \left( \frac{1}{1 + L(s)} \cdot \frac{1}{s^q} \right), \quad
             L(0) = \frac{k_{\text{Bode}}}{s^q}
         \end{align*}
         knowing Type (number of poles at origin of $L(s)$) and order $q$ of ramp:\\

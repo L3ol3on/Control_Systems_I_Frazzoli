@@ -1,7 +1,12 @@
 \subsection{Step responses}
     \subsubsection{First Order System}
+    \begin{minipage}{0.59\linewidth}
+        \includegraphics[width = \linewidth]{src/images/first_order_step_response.png}
+    \end{minipage}
+    \begin{minipage}{0.39\linewidth}
         \begin{align*}
-            G(s) = \frac{1}{\tau s + 1} \Leftrightarrow 
+            G(s) = \frac{1}{\tau s + 1}\\
+            \Leftrightarrow 
             \begin{cases*}
                 \dot{x} = -\frac{1}{\tau} x + \frac{1}{\tau} u\\
                 y = x
@@ -9,31 +14,34 @@
             \Rightarrow y(t) = 1-e^{-t/\tau}\\
             T_d = \tau \ln(100/d)
         \end{align*}
-        \includegraphics[width = \linewidth]{src/images/first_order_step_response.png}
+    \end{minipage}
+
     \subsubsection{Second Order System}
         \begin{align*}
-            G(s) = \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}\\
-            \Leftrightarrow 
-            \begin{cases*}
-                \dot{x} = 
-                    \left[\begin{array}{c c}
-                        0 & 1\\
-                        -\omega_n^2 & -2 \zeta \omega_n
-                    \end{array}\right]
-                    x + 
-                    \left[\begin{array}{c}
-                        0\\
-                        \omega_n^2
-                    \end{array}\right] u\\
-                y = x
-            \end{cases*}\\
-            \Rightarrow y(t) = 1 - \frac{1}{cos(\varphi)}e^{\sigma t} cos(\omega t + \varphi)\\
-            T_d = \tau \ln(100/d)\\
-            \tau = \frac{1}{|\sigma|}\\
-            \text{Time to peak: } T_p = \frac{\pi}{\tau}\\
-            \text{Peak overshoot (ratio): } \ln(M_p) = \frac{\sigma \pi}{\omega} = \frac{\zeta \pi}{\sqrt{1 - \zeta^2}} \Rightarrow \zeta^2 = \frac{\ln(M_p)^2}{\pi^2 + \ln(M_p)^2}\\
-            \text{Rise time: } T_{100 \%} = \frac{\frac{\pi}{2} - \varphi}{\omega} \approx \frac{\pi}{2 \omega_n}
+            &A = \left[\begin{matrix}
+                0 & 1\\
+                -\omega_n^2 & -2 \zeta \omega_n
+            \end{matrix}\right],
+            B = \left[\begin{matrix}
+                0\\
+                \omega_n^2
+            \end{matrix}\right] \Leftrightarrow G = \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}\\
+            &C = 1, D = 0 \quad \quad \quad \quad \Rightarrow y(t) = 1 - \frac{1}{cos(\varphi)}e^{\sigma t} cos(\omega t + \varphi)\\
+            \hline
+            &\text{Rise time: } T_{100 \%} = \frac{\frac{\pi}{2} - \varphi}{\omega} \approx \frac{\pi}{2 \omega_n}
         \end{align*}
-        \titel{Nomenclature}
+        \begin{minipage}{0.49\linewidth}
+            \includegraphics[width = \linewidth]{src/images/second_order_step_response.png}
+        \end{minipage}
+        \begin{minipage}{0.49\linewidth}
+            \begin{align*}
+                T_d = \tau \ln(100/d) \quad \quad \tau = \frac{1}{|\sigma|}\\
+                \text{Time to peak: } T_p = \frac{\pi}{\tau}\\
+                \text{Peak overshoot \%: } \ln(M_p)\\ 
+                = \frac{\sigma \pi}{\omega} = \frac{\zeta \pi}{\sqrt{1 - \zeta^2}}\\
+                \Rightarrow \zeta^2 = \frac{\ln(M_p)^2}{\pi^2 + \ln(M_p)^2}\\
+            \end{align*}
+        \end{minipage}
+        
+        \titel{Nomenclature of poles in complex plane}
         \input{src/3_analysis/2-1_visualization_poles.tex}
-        \includegraphics[width = \linewidth]{src/images/second_order_step_response.png}

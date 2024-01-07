@@ -2,9 +2,19 @@
 choose $u(t) = e^{st}$ where s is a complex number\\
 $ y(t) = \underbrace{Ce^{At} [x(0) - (sI - A)^{-1} B]}_{\text{Transient response (= 0 if as. stable)}}
 + \underbrace{[C(sI - A)^{-1} B + D]e^{st}}_{\text{steady-state response}}$\\
-\includegraphics*[width = \linewidth]{src/images/transient_steady_state.png}
-$\Rightarrow y_{ss} = G(s) e^{st}\\
-G(s) = \frac{Y(s)}{U(s)} = C(sI - A)^{-1} B + D = \frac{C \cdot \text{Adj}(sI - A) \cdot B}{\text{det}(sI - A)} + D$\\
+\begin{minipage}{0.39\linewidth}
+    \begin{align*}
+        \Rightarrow y_{ss} = G(s) e^{st}\\
+    G(s) = \frac{Y(s)}{U(s)}\\
+    = C(sI - A)^{-1} B + D\\
+    = \frac{C \cdot \text{Adj}(sI - A) \cdot B}{\text{det}(sI - A)} + D
+    \end{align*}
+\end{minipage}
+\begin{minipage}{0.59\linewidth}
+    \includegraphics[width = \linewidth]{src/images/transient_steady_state.png}
+\end{minipage}
+
+
 \begin{align*}
     \text{adj}\left[
         \begin{array}{c c}
