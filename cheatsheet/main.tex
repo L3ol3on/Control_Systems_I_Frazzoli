@@ -50,7 +50,7 @@
 	\input{src/4_manipulation/2_lead_lag.tex}
 	
 \section{System Synthesis}
-
+	\input{src/4_synthesis/1_loop_shaping.tex}
 
 \section{Appendix}
 	\input{src/5_appendix/1_matrix_exp.tex}
@@ -61,30 +61,6 @@
 \end{document}
 
 \begin{comment}
-	TERMINOLOGY
-	Definitions from ZF
-Input, output, state…
-	Classification of Systems (Also see ZF)
-SYSTEM MODELING / transfer real world problems to input output system
-	Thermodynamics
-	Conservation of mass: for LTI SISO systems: $\frac{d}{dt} \text{storage} = \sum \text{inflows} - \sum \text{outflows}$
-
-	Mechanics
-NETWORK ANALYSIS
-	(Interconnections & Basic Control Architectures) (Block Diagrams on ZF)
-LINEARIZATION
-	Jacobian Linearization process
-LINEAR SYSTEM ANALYSIS
-TIME RESPONSE
-STABILITY
-	Equilibrium point: $\dot{x}(t) = 0
-FREQUENCY DOMAIN
-	y(t) = G(s) * u(t) for u(t) = e^(st)
-	Therefore, for sinusoidal inputs: u(t) = cos(omega * t) -> y = M cos(omega * t + phi), M = |G(j * omega)|, phi = \angle G(j * omega
-	e^(i*s*t) = cos(s*t) + i*sin(s*t), cos(s*t) = 
-	STATE SPACE -> TRANSFER FUNCTION
-	TRANSFER FUNCTION -> CONTROLLABLE CANONICAL FORM
-	POLES/ZEROS
 SIMPLE LAPLACE
 	derivative of a laplace function
 	laplace of step function

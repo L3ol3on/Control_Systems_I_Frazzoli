@@ -30,8 +30,8 @@
         \end{minipage}
     \end{minipage}
     \begin{align*}
-        x(t) &= \underbrace{x_0 \cdot e^{At}}_{\substack{\text{hom. solution}\\ u(t) = 0}} + \underbrace{\int\limits_0^t e^{A (t-\rho)} B u(\rho) d\rho}_{\substack{\text{inhom. solution, zero initial condition}\\ x(0) = 0}}\\
-        y(t) &= \underbrace{C \cdot x_0 \cdot e^{At}}_{\text{natural response}} + \underbrace{C \cdot \int\limits_0^t e^{A (t-\rho)} B u(\rho) d\rho}_{\text{forced response}} + \underbrace{D u(t)}_{\text{feedthrough}}
+        x(t) &= \underbrace{e^{At} \cdot x_0}_{\substack{\text{hom. solution}\\ u(t) = 0}} + \underbrace{\int\limits_0^t e^{A (t-\rho)} B u(\rho) d\rho}_{\substack{\text{inhom. solution, zero initial condition}\\ x(0) = 0}}\\
+        y(t) &= \underbrace{C \cdot e^{At} \cdot x_0}_{\text{natural response}} + \underbrace{C \cdot \int\limits_0^t e^{A (t-\rho)} B u(\rho) d\rho}_{\text{forced response}} + \underbrace{D u(t)}_{\text{feedthrough}}
     \end{align*}
 
     state transition function: $\psi(t) = e^{At}$

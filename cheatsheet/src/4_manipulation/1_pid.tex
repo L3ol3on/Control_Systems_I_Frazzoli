@@ -22,6 +22,7 @@
             \begin{align*}
                 y(t) = \int u(t) dt = \int e^{st} dt = \frac{1}{s} \cdot e^{st} = \frac{1}{s} \cdot u(t)
             \end{align*}
+            \includegraphics[width = \linewidth]{src/images/PI-controller.png}
         \begin{itemize}
             \item proportional to accumulated error
             \item new zero introduced
@@ -39,6 +40,7 @@
             \begin{align*}
                 y(t) = \frac{d u(t)}{dt} = \frac{d}{dt} e^{st} = s \cdot e^{st} = s \cdot u(t)
             \end{align*}
+            \includegraphics[width = \linewidth]{src/images/PD-controller.png}
         \begin{itemize}
             \item proportional to rate of change of error (reduced overshoot)
             \item pole introduced at $p=0$
@@ -71,4 +73,5 @@
                 \end{align*}
             \end{scriptsize}
         \end{minipage}
+        \includegraphics[width = \linewidth]{src/images/PID-controller.png}
         %Von ZF: P-controller, I-controller, D-controller
