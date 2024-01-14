@@ -9,31 +9,28 @@
     \begin{minipage}{0.49\linewidth}
         \titel{Complimentary Sensitivity}
         \begin{center}
-            $S(s) = \frac{L(s)}{1 + L(s)}$
+            $T(s) = \frac{L(s)}{1 + L(s)}$
         \end{center}
     \end{minipage}
     
     \subsubsection{steady state error, disturbance and noise}
     find steady state using final value theorem $\lim\limits_{t \rightarrow \infty} a(t) = \lim\limits_{s \rightarrow 0} A(s)$
-    \begin{minipage}{0.32\linewidth}
-        \begin{align*}
-            e(t) = S(s) r(t)\\
-            e(t) = - S(s) d_2(t)
-        \end{align*}
-    \end{minipage}
-    \begin{minipage}{0.32\linewidth}
-        \begin{align*}
-            e(t) = - S(s) n(t)\\
-            e(t) = - T(s) d_1(t)
-        \end{align*}
-    \end{minipage}
-    \begin{minipage}{0.32\linewidth}
-        \begin{align*}
-            y(t) = T(s) r(t)
-        \end{align*}
-    \end{minipage}
-    Noise rejection: small $T(s)$ desired at high frequencies, therefore Magnitude in Bode goes to $-\infty$ for large frequencies.
-    Disturbance rejection: small $T(s)$ or $S(s)$ desired at low frequencies
+
+    \begin{tabular}{|l||*{3}{c|}}\hline
+        \backslashbox{From}{To}     &\makebox[3em]{$e(t)$}      &\makebox[3em]{$u(t)$}      &\makebox[3em]{$y(t)$}\\
+        \hline\hline
+        $r(t)$                      & $S(s)$                    & $\frac{C}{1 + CP}$        & $T(s)$ \\
+        \hline
+        $d_1(t)$                    & $-P(s) S(s)$              & $- \frac{CP}{1 + CP}$     & $P(s) S(s)$ \\
+        \hline
+        $d_2(t)$                    & $-S(s)$                   & $- \frac{C}{1 + CP}$      & $S(s)$ \\
+        \hline
+        $n(t)$                      & $-S(s)$                   & $- \frac{C}{1 + CP}$      & $-T(s)$ \\
+        \hline
+    \end{tabular}
+    Noise rejection: Noise usually has high $\omega$, for $n(t) \rightarrow y(t)$: use $-T(s) \rightarrow$ $|T(s)| << 1$ desired at high frequencies for noise rejection\\
+    Disturbance rejection: Disturbance usually has low $\omega$, for $d_2$: small $S(s)$ desired at low frequencies\\
+    Bode's integral: $\int\limits_{0}^{+\infty} \log|S(j \omega)| d\omega = \pi \sum p_k$, $p_k$ are the unstable poles, this leads to an impossibility to reject, e.g. disturbances at all frequencies.
 
     \subsubsection{Steady State error to Ramp reference Inputs}
         Ramp is obtained by integrating step q-times: $r(t) = \frac{1}{s^q}$
