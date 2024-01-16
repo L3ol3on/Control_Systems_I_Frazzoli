@@ -1,0 +1,13 @@
+\subsection*{Jacobian Linearization of nonlinear Systems}
+    \begin{align*}
+        \frac{d}{dx} = f(x, u), \quad \quad y = h(x, u)\\
+        \text{Equilibrium at state } \overline{x}: f(\overline{x}, \overline{u}) = 0\\
+        \zeta = x - \overline{x}, \quad \quad \nu = u - \overline{u}\\
+        \Rightarrow \frac{d}{dt} \zeta = \overline{f}(\zeta, \nu) \quad \quad y = \overline{h}(\zeta, \nu)
+        \Rightarrow \overline{f}(0, 0) = 0, \quad \quad \overline{h}(0, 0) = \overline{y}\\
+        \frac{d}{dt} \zeta \approx A \zeta + B \nu, \quad \quad y - \overline{y} \approx C \zeta + D \nu\\
+        \begin{array}{c c}
+            A = \frac{\partial \overline{f}(\zeta, \nu)}{\partial \zeta} \bigg|_{(0, 0)}       & B = \frac{\partial \overline{f}(\zeta, \nu)}{\partial \nu} \bigg|_{(0, 0)}\\
+            C = \frac{\partial \overline{h}(\zeta, \nu)}{\partial \zeta} \bigg|_{(0, 0)}       & D = \frac{\partial \overline{h}(\zeta, \nu)}{\partial \nu} \bigg|_{(0, 0)}
+        \end{array}
+    \end{align*}
