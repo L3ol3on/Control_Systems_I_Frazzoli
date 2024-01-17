@@ -1,17 +1,22 @@
 \subsection{System response}
     \includegraphics[width = \linewidth]{src/images/basic_block_chart.png}
-    \begin{minipage}{0.49\linewidth}
+    \begin{minipage}{0.33\linewidth}
         \titel{Sensitivity}
         \begin{center}
             $S(s) = \frac{1}{1 + L(s)}$
         \end{center}
     \end{minipage}
-    \begin{minipage}{0.49\linewidth}
+    \begin{minipage}{0.33\linewidth}
         \titel{Complimentary Sensitivity}
         \begin{center}
             $T(s) = \frac{L(s)}{1 + L(s)}$
         \end{center}
     \end{minipage}
+    \begin{minipage}{0.31\linewidth}
+        \hfill \break \hfill \break
+        $S(s) + T(s) = 1$
+    \end{minipage}
+    In Nyquist plot of $T(s)$: $|S(s)| = $ Distance to $- \frac{1}{k}$
     
     \subsubsection{steady state error, disturbance and noise}
     find steady state using final value theorem $\lim\limits_{t \rightarrow \infty} a(t) = \lim\limits_{s \rightarrow 0} A(s)$

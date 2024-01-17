@@ -7,20 +7,20 @@
         \end{align*}
         Therefore, superposition holds for linear systems.\\
         Linear System can be represented in state-space-form, the matrices do not depend on time:
-        \begin{equation}\label{eqn:LTI}
+        \begin{align*}\label{eqn:LTI}
             \begin{cases}
                 \dot{x}(t) = Ax(t) + Bu(t)\\
                 y(t) = Cx(t) + Du(t)
             \end{cases}
-        \end{equation}
+        \end{align*}
 
     \subsubsection*{Causal vs non-causal systems}
         Output at time $t$ depends only on the values of input on $(-\infty, t]$ (future inputs do not affect current output)\\
         $y(t) = f(u(\tau)), \tau < t$
     
-    \subsubsection*{Static systems}
-        Static (memoryless) vs Dynamic
-        y(t) only depends on u(t), output does not depend on past or future\\
+    \subsubsection*{Static vs Dynamic systems}
+        Static (memoryless):
+        y(t) only depends on u(t), output does not depend on past or future, ex. $\dot{x} = u \rightarrow$ dynamic\\
         $dim(x) = 0$ : dimension of system equals 0
 
     \subsubsection*{Time invariant vs Time-varying !überarbeiten!}

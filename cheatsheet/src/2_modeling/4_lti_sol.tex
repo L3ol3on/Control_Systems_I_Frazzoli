@@ -31,7 +31,7 @@
     \end{minipage}
     \begin{align*}
         x(t) &= \underbrace{e^{At} \cdot x_0}_{\substack{\text{hom. solution}\\ u(t) = 0}} + \underbrace{\int\limits_0^t e^{A (t-\rho)} B u(\rho) d\rho}_{\substack{\text{inhom. solution, zero initial condition}\\ x(0) = 0}}\\
-        y(t) &= \underbrace{C \cdot e^{At} \cdot x_0}_{\text{natural response}} + \underbrace{C \cdot \int\limits_0^t e^{A (t-\rho)} B u(\rho) d\rho}_{\text{forced response}} + \underbrace{D u(t)}_{\text{feedthrough}}
+        y(t) &= \underbrace{C \cdot e^{At} \cdot x_0}_{\substack{\text{natural / initial} \\ \text{condition response}}} + \underbrace{C \cdot \int\limits_0^t e^{A (t-\rho)} B u(\rho) d\rho}_{\text{forced response}} + \underbrace{D u(t)}_{\text{feedthrough}}
     \end{align*}
 
     state transition function: $\psi(t) = e^{At}$

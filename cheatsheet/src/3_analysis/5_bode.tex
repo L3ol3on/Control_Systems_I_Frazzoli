@@ -26,9 +26,6 @@
             \item angle changes within a decade before and afer the pole/zero
             \item For $G(s)$ with incoming slope: calculate $|G(j \omega)|$ for $\omega = 1$
         \end{itemize}
-        
-
-
 
     \subsubsection{Adding Bode Plots}
         Bode plot of $T(s) = k_1 \cdot T_1(s) + k_2 \cdot T_2(s)$ with given bode plots of $T_1(s)$ and $T_2(s)$:
@@ -40,11 +37,12 @@
     \subsubsection{Stability in Bode Plots}
         \begin{minipage}{0.64 \linewidth}
             \titel{crossover frequency, phase and gain margin}
+                Bode plot of open loop system $\rightarrow$ closed loop Gain and Phase margin
                 \includegraphics[width = \linewidth]{src/images/gain_phase_margin.png}
         \end{minipage}
         \begin{minipage}{0.34 \linewidth}
             \titel{stability criterion}
-            For stable open loop systems, the Nyquist criterion shows that the following must hold:
+            For \textbf{\textit{stable}} open loop systems, the Nyquist criterion shows that the following must hold:
             \begin{align*}
                 |G(j \omega_{pc})| < 0 dB\\
                 \angle(G(j \omega_{pc})) > -180^{\circ}
@@ -58,5 +56,6 @@
     
 
     \subsubsection{Bandwidth}
+        maximum $\omega$ for which $|T(s)| > \frac{1}{\sqrt{2}}$
         Bandwidth is highest frequency a system can handle. Closed loop bandwidth $\approx$ open loop crossover frequency
         
