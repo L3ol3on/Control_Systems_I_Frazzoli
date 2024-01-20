@@ -38,7 +38,7 @@ title("Bode Plot of a Lead-Controller")
 % Lag (0 < b < a)
 a = 10;
 b = 1;
-T_Lag = a/b * (s/a + 1) / (s/b + 1);
+T_Lag = (s/a + 1) / (s/b + 1);
 figure(5)
 bode(T_Lag)
 title("Bode Plot of a Lag-Controller")
