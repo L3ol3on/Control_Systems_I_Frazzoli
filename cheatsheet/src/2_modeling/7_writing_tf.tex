@@ -6,10 +6,10 @@
         $p_1, \ldots, p_n =$ poles, $r_1, \ldots, r_n =$ residues
     \titel{Root-locus}
         \begin{align*}
-            G(s) &= \frac{k_{rl}}{s^q} \frac{(s-z_1)(s-z_2) \dots (s-z_m)}{(s-p_1)(s-p_2) \dots (s-p_{n-q})}
+            G(s) &= \frac{k_{\text{rl}}}{s^q} \frac{(s-z_1)(s-z_2) \dots (s-z_m)}{(s-p_1)(s-p_2) \dots (s-p_{n-q})}
         \end{align*}
     \titel{Bode form}
         \begin{align*}
-            G(s) &= \frac{k_{bode}}{s^q} \frac{(\frac{s}{-z_1} + 1)(\frac{s}{-z_2} + 1) \dots (\frac{s}{-z_m} + 1)}{(\frac{s}{-p_1} + 1)(\frac{s}{-p_2} + 1) \dots (\frac{s}{-p_{n-q}} + 1)}\\
-            k_{\text{bode}} &= \frac{(-z_1)(-z_2) \dots (-z_m)}{(-p_1)(-p_2) \dots (-p_{n-q})} \underbrace{= y_{ss}(t) = G(0)}_{\text{for stable systems}}
+            G(s) &= \frac{k_{\text{bode}} \cdot k_{\text{rl}}}{s^q} \frac{(\frac{s}{-z_1} + 1)(\frac{s}{-z_2} + 1) \dots (\frac{s}{-z_m} + 1)}{(\frac{s}{-p_1} + 1)(\frac{s}{-p_2} + 1) \dots (\frac{s}{-p_{n-q}} + 1)}\\
+            k_{\text{bode}} &= \frac{(-z_1)(-z_2) \dots (-z_m)}{(-p_1)(-p_2) \dots (-p_{n-q})}, k_{\text{bode}} \cdot k_{\text{rl}} = \underbrace{y_{ss}(t) = G(0)}_{\text{for stable systems}}
         \end{align*}

@@ -23,7 +23,7 @@
         y(t) only depends on u(t), output does not depend on past or future, ex. $\dot{x} = u \rightarrow$ dynamic\\
         $dim(x) = 0$ : dimension of system equals 0
 
-    \subsubsection*{Time invariant vs Time-varying !überarbeiten!}
+    \subsubsection*{Time invariant vs Time-varying}
         output does not depend on time, only on $\Delta t$ (counter example sun clock)\\
         {\centering\textbf{\underline{Time-varying}}}: Matrices $A(t), B(t), C(t), D(t)$ depend on t
 %        \begin{equation}
@@ -39,18 +39,19 @@
 %            \end{cases}
 %        \end{equation}
 
-        {\centering\textbf{\underline{Time Invariant}}}
+        \titel{Time Invariant}
         \begin{align*}
-            \text{time shift operator $\sigma_{\tau}$:\quad \quad} \sigma_{\tau} y(t) = \Sigma \sigma_{\tau} u(t)\\
+            \text{time shift operator $\sigma_{\tau}$:\quad } \sigma_{\tau} y(t) = \Sigma \sigma_{\tau} u(t)\\
             y(t - \tau) = \Sigma(u(t - \tau))\\
-            t_0 = 0
-            \begin{cases}
-                \dot{x}(t) = f(x(t), u(t))\\
-                y(t) = g(x(t), u(t))
-            \end{cases}
-            \rightarrow
-            \begin{cases}
-                \dot{x}(t) = Ax(t) + Bu(t)\\
-                y(t) = Cx(t) + Du(t)
-            \end{cases}
+            y = \Psi(t, u, x_0, t_0) = \Psi(t+T, u(t-T), x_0, t_0 + T)
+            %t_0 = 0
+            %\begin{cases}
+            %    \dot{x}(t) = f(x(t), u(t))\\
+            %    y(t) = g(x(t), u(t))
+            %\end{cases}
+            %\rightarrow
+            %begin{cases}
+            %    \dot{x}(t) = Ax(t) + Bu(t)\\
+            %    y(t) = Cx(t) + Du(t)
+            %\end{cases}
         \end{align*}

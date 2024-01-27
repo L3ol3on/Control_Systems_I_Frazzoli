@@ -33,15 +33,15 @@
         $n(t)$                      & $-S(s)$                   & $- \frac{C}{1 + CP}$      & $-T(s)$ \\
         \hline
     \end{tabular}
-    Noise rejection: Noise usually has high $\omega$, for $n(t) \rightarrow y(t)$: use $-T(s) \rightarrow$ $|T(s)| << 1$ desired at high frequencies for noise rejection\\
-    Disturbance rejection: Disturbance usually has low $\omega$, for $d_2$: small $S(s)$ desired at low frequencies\\
+    \textbf{Noise rejection}: $\omega_n >> 1$, therefore $n(t) \rightarrow y(t) \Rightarrow |T(j \omega)| << 1$ for $\omega >> 1$  for noise rejection, $\omega_c < 0.1 \omega_n$\\
+    \textbf{Disturbance rejection}: $\omega_d << 1$, therefore $d_2(t) \rightarrow y(t) \Rightarrow |S(j \omega)| << 1$ for $\omega << 1$  for disturbance rejection, $\omega_c > 10 \omega_d$\\
     Bode's integral: $\int\limits_{0}^{+\infty} \log|S(j \omega)| d\omega = \pi \sum p_k$, $p_k$ are the unstable poles, this leads to an impossibility to reject, e.g. disturbances at all frequencies.
 
     \subsubsection{Steady State error to Ramp reference Inputs}
         Ramp is obtained by integrating step q-times: $r(t) = \frac{1}{s^q}$
         \begin{align*}
             \rightarrow e_{ss} = \lim\limits_{s \rightarrow 0} \left( \frac{1}{1 + L(s)} \cdot \frac{1}{s^q} \right), \quad
-            L(0) = \frac{k_{\text{Bode}}}{s^q}
+            L(0) = \frac{k_{\text{Bode}} \cdot k_{\text{rl}}}{s^q}
         \end{align*}
         knowing Type (\# of integrators) and order $q$ of ramp:\\
         \begin{tabu}[width = \linewidth]{| X | X | X | X |}

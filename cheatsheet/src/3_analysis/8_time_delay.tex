@@ -1,14 +1,14 @@
 \subsection{Time Delay}
-    \begin{minipage}{0.59\linewidth}
+    \begin{minipage}{0.63\linewidth}
         \begin{align*}
-            y(t) = e^{s(t-T)} = e^{-sT} u(t)\\
+            y(t) = u(t-T) = e^{s(t-T)} = e^{-sT} u(t)\\
             \text{Time Delay: } e^{-sT} \overset{\text{Padé}}{\approx} \frac{\frac{2}{T} - s}{\frac{2}{T} + s}\\
             |e^{-sT}| = 1, \quad \angle e^{-sT} = - \omega T
         \end{align*}
         Use Padé approx for Root Locus\\
-        Time delay can make the plot make encircle the $-\frac{1}{k}$ Point
+        Time delay can make the plot encircle $-\frac{1}{k}$
     \end{minipage}
-    \begin{minipage}{0.39\linewidth}
+    \begin{minipage}{0.35\linewidth}
         \includegraphics[width = \linewidth]{src/images/time_delay_nyquist.png}
     \end{minipage}
     \begin{minipage}{0.29\linewidth}
