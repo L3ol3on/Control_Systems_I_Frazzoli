@@ -1,10 +1,10 @@
-\subsection*{Non-minimum-phase / unstable system loop shaping}
+\subsection{Non-minimum-phase / unstable system loop shaping}
 \begin{align*}
-    \text{For a plant: } P(s) = \frac{s - z}{s - p}, z > 0, p > 0\\
-    P(s) = P_{\text{mp}}(s) \cdot D(s)\\
-    P_{\text{mp}}(s) = \frac{s + z}{s + p}\\
+    P(s) = \frac{s - z}{s - p} %, z > 0, p > 0\\
+    \quad &\Rightarrow \quad P(s) = P_{\text{mp}}(s) \cdot D(s)\\
+    P_{\text{mp}}(s) = \frac{s + z}{s + p}\quad &, \quad
     D(s) = \frac{z - s}{s + z} \cdot \frac{s + p}{s - p}\\
-    \text{Non-minimum-phase: } \angle D(j \omega) = -2 \arctan(\frac{\omega}{z})\\
-    \text{unstable pole: } \angle D(j \omega) = -2 \arctan(\frac{p}{\omega})
+    z > 0 \Rightarrow \angle D = -2 \tan^{-1}(\frac{\omega}{z}) &\quad
+    p > 0 \Rightarrow \angle D = -2 \arctan(\frac{p}{\omega})
 \end{align*}
-$D(s)$ only changes phase of system, therefore design system for $P_{\text{mp}}(s)$ and adapt phase
+$|D(s)| = 1 \rightarrow$ design system for $P_{\text{mp}}(s)$ and adapt phase
