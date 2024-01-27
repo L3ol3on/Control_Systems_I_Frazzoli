@@ -6,22 +6,25 @@
     \end{minipage}
     \begin{minipage}{0.59\linewidth}
         \titel{Lyapunov stable}
-        $\lim_{t \rightarrow \infty} x(t) \neq \pm \infty \Leftrightarrow Re(\lambda_i) \leq 0\\
-        \text{exactly one } Re(\lambda_i) = 0$
+        \begin{align*}
+            \lim_{t \rightarrow \infty} x(t) \neq \pm \infty \Leftrightarrow Re(\lambda_i) \leq 0\\
+            \text{No repeated } \lambda_i \text{ with } Re(\lambda_i) = 0
+        \end{align*}
 %
         \titel{Asymptotically stable}
-        $\lim_{t \rightarrow \infty} x(t) = 0 \Leftrightarrow Re(\lambda_i) < 0$
-
+        \begin{align*}
+            \lim_{t \rightarrow \infty} x(t) = 0 \Leftrightarrow Re(\lambda_i) < 0
+        \end{align*}
+%
         \titel{BIBO (Bounded Input Bounded Output)}
-        $\lim_{t \rightarrow \infty} y(t) \neq \pm \infty, x(t = 0) = 0$
+        \begin{align*}
+            \lim_{t \rightarrow \infty} y(t) \neq \pm \infty, x_0 = 0
+        \end{align*}
     \end{minipage}
-    potentially stabilizable: non-controllable $x_i$ asymptotically stable
 
-    \begin{center}
-        \textbf{Not stabilizable and observable systems}
-    \end{center}
     \begin{tabu}{|X[6] X X[3]|}
         \hline
+        asymptotically stable & $\rightarrow$ & lyapunov stable\\
         asymptotically stable & $\rightarrow$ & BIBO stable\\
         ? & $\leftarrow$ & BIBO stable\\
         Lyap. stable or unstable & $\rightarrow$ & ?\\
